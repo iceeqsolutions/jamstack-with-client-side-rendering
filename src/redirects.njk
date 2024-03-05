@@ -1,0 +1,11 @@
+---
+permalink: _redirects # folder in which we want to store the generated redirects
+---
+
+/ /fr/index.html    302 Language=fr
+
+{%- for item in news %}
+/ /{{item.country}}/index.html   302 Country={{item.country}}
+{%- endfor %}
+
+/ /gb/index.html   404
